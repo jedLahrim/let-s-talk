@@ -7,7 +7,7 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config({path: '.env'});
 
-// app.use(cors({origin:'https://lets-talk-backend.vercel.app'}));
+app.use(cors({origin:'https://lets-talk-backend.vercel.app'}));
 app.use(express.json());
 
 mongoose
