@@ -1,4 +1,4 @@
-export const host = `https://let-s-talk-backend-omega.vercel.app`;
+export const host = `localhost:5002`;
 export const loginRoute = `${host}/api/auth/login`;
 export const registerRoute = `${host}/api/auth/register`;
 export const logoutRoute = `${host}/api/auth/logout`;

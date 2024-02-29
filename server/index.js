@@ -26,7 +26,12 @@ app.use("/api/messages", messageRoutes);
 const server = app.listen(process.env.PORT, () =>
     console.log(`Server started on ${process.env.PORT}`)
 );
-const io = socket(server);
+const io = socket(server, {
+    cors: {
+        origin: "http://76.76.21.123",
+        credentials: true,
+    },
+});
 
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
@@ -42,3 +47,4 @@ io.on("connection", (socket) => {
         }
     });
 });
+//
