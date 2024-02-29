@@ -28,7 +28,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
     cors: {
-        origin: "https://lets-talk-olive.vercel.app",
+        origin: "http://76.76.21.123",
         credentials: true,
     },
 });
