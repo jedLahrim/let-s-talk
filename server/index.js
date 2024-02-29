@@ -23,13 +23,12 @@ mongoose
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-
-const server = app.listen(process.env.PORT, () =>
+const server= app.listen(process.env.PORT, () =>
     console.log(`Server started on ${process.env.PORT}`)
 );
 const io = socket(server, {
     cors: {
-        origin: "https://let-s-talk-backend-delta.vercel.app",
+        origin: "*",
         credentials: true,
     },
 });
