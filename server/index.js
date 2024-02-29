@@ -4,9 +4,8 @@ const mongoose = require("mongoose");
 const authRoutes = require("./src/routes/auth");
 const messageRoutes = require("./src/routes/messages");
 const socket = require("socket.io");
-const app = require("./api")
 require("dotenv").config({path: '.env'});
-
+const app = express();
 app.use(cors());
 app.use(express.json());
 
